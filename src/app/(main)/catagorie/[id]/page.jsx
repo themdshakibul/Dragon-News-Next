@@ -23,7 +23,7 @@ const NewsCatagoriePage = async ({ params }) => {
               <h2 className="text-2xl font-semibold">No News Found!</h2>
             </div>
           ) : (
-            <div className="space-y-5">
+            <div className="space-y-5 mt-5">
               {NewsId.map((news) => (
                 <NewsCard key={news._id} news={news} />
               ))}

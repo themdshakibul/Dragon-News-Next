@@ -3,7 +3,6 @@ import Link from "next/link";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 
 const NewsCard = ({ news }) => {
-  //  others_info, category_id, rating, total_view, title, author, thumbnail_url, image_url, details}
   return (
     <section>
       <div>
@@ -13,7 +12,7 @@ const NewsCard = ({ news }) => {
             <div className="flex items-center gap-3">
               <Image
                 src={news.author?.img}
-                alt={news.author?.name}
+                alt={"iamge"}
                 width={50}
                 height={50}
                 className="rounded-full"
@@ -35,7 +34,7 @@ const NewsCard = ({ news }) => {
             <figure>
               <Image
                 src={news.image_url}
-                alt={news.author.name}
+                alt={news.author?.name}
                 width={300}
                 height={300}
                 className="rounded-lg w-full"
@@ -46,10 +45,8 @@ const NewsCard = ({ news }) => {
             </div>
             {/* rating and view section */}
             <div className="flex items-center justify-between">
-              <div>
-                <h2 className="font-semibold">⭐⭐⭐{news.rating?.number}</h2>
-                <h2 className="font-semibold">View: {news.total_view}</h2>
-              </div>
+              <h2 className="font-semibold">⭐⭐⭐{news.rating?.number}</h2>
+              <h2 className="font-semibold">View: {news.total_view}</h2>
             </div>
             <Link href={`/news/${news._id}`}>
               <button className="text-orange-500 font-bold cursor-pointer">
