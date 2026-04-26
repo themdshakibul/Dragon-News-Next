@@ -2,9 +2,13 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signupgpage = () => {
+  const [isShowPassword, setIsShowPassword] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -74,16 +78,22 @@ const Signupgpage = () => {
                 <p className="text-red-500">{errors.password.message}</p>
               )}
             </fieldset>
-            <fieldset className="fieldset">
+            <fieldset className="fieldset relative">
               <legend className="fieldset-legend">Password</legend>
               <input
-                type="password"
+                type={isShowPassword ? "text" : "password"}
                 className="input"
                 placeholder="Enter your password"
                 {...register("password", {
                   required: "password field is required",
                 })}
               />
+              <span
+                className="absolute top-5 right-2 cursor-pointer"
+                onClick={() => setIsShowPassword(!isShowPassword)}
+              >
+                {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
               {errors.password && (
                 <p className="text-red-500">{errors.password.message}</p>
               )}
@@ -93,8 +103,8 @@ const Signupgpage = () => {
             </button>
             <p>
               Dont have an accoutn?{" "}
-              <Link href={"/regester"} className="text-red-500">
-                Regester
+              <Link href={"/loging"} className="text-red-500">
+                Loging
               </Link>
             </p>
           </form>
