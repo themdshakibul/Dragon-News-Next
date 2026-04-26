@@ -53,8 +53,8 @@ const NewsDetailsPage = async ({ params }) => {
               <h2 className="font-semibold">View: {news.total_view}</h2>
             </div>
             <Link href={`/catagorie/${news.category_id}`}>
-              <button className="text-white btn btn-success font-bold cursor-pointer">
-                Back to Catagoried
+              <button className="text-white btn bg-purple-500 font-bold cursor-pointer">
+                see other news for the catagories
               </button>
             </Link>
           </div>

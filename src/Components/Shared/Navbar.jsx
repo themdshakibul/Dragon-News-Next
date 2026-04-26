@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center gap-3 ">
           <Image src={avaterImage} alt="avaterImage" width={50} height={50} />
           <button className="btn bg-red-500 text-white">
-            <Link href={"/login"}>Siging</Link>
+            <Link href={"/loging"}>Siging</Link>
           </button>
         </div>
       </div>
