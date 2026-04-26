@@ -23,7 +23,7 @@ const Signupgpage = () => {
       email: email,
       password: password,
       image: photo,
-      callbackURL: "/",
+      callbackURL: "/loging",
     });
 
     if (error) {
