@@ -10,6 +10,12 @@ const Rightsidebar = () => {
     });
   };
 
+  const handelGithubSignin = async () => {
+    const data = await authClient.signIn.social({
+      provider: "github",
+    });
+  };
+
   return (
     <section>
       <div className="flex flex-col gap-3 mt-5">
@@ -19,7 +25,7 @@ const Rightsidebar = () => {
         >
           <FaGoogle /> Loging width Google
         </button>
-        <button className="btn border-2">
+        <button onClick={handelGithubSignin} className="btn border-2">
           <FaGithub /> Loging width Github
         </button>
       </div>
