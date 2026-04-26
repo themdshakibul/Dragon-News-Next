@@ -11,17 +11,14 @@ const Signupgpage = () => {
   } = useForm();
 
   const handelSignupFunc = (data) => {
-    console.log(data, "data");
-
     const { name, photo, email, password } = data;
-    console.log(name, photo);
   };
 
   return (
     <section>
       <div className="container mx-auto  flex items-center justify-center h-[80vh] ">
         <div className="p-10 rounded-lg bg-slate-100">
-          <h2 className="text-2xl font-semibold mb-6">Loging your accoutn</h2>
+          <h2 className="text-xl font-semibold mb-6">Regester your accoutn</h2>
           <form className="space-y-3" onSubmit={handleSubmit(handelSignupFunc)}>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Name</legend>
@@ -76,7 +73,7 @@ const Signupgpage = () => {
               )}
             </fieldset>
             <button className="btn bg-black w-full text-white mb-5">
-              Logint
+              Regester
             </button>
             <p>
               Dont have an accoutn?{" "}

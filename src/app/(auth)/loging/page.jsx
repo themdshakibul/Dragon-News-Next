@@ -20,7 +20,7 @@ const Logingpage = () => {
     <section>
       <div className="container mx-auto  flex items-center justify-center h-[80vh] ">
         <div className="p-10 rounded-lg bg-slate-100">
-          <h2 className="text-2xl font-semibold mb-6">Loging your accoutn</h2>
+          <h2 className="text-xl font-semibold mb-6">Loging your accoutn</h2>
           <form className="space-y-3" onSubmit={handleSubmit(handelLoginFunc)}>
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Email</legend>
